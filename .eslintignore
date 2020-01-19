@@ -1,0 +1,9 @@
+node_modules/**
+dist/**
+package-lock.json
+template/**
+build/**
+config/**
+lib/**
+types/**
+*.js

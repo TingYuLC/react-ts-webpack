@@ -1,0 +1,205 @@
+.component-carouse {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+}
+.component-carouse .carouse-board {
+  position: relative;
+  left: 0;
+  width: 5000px;
+  height: 300px;
+  padding: 0;
+  list-style: none;
+}
+.component-carouse .carouse-board .carouse-board-item {
+  float: left;
+  width: 400px;
+  height: 300px;
+  font-size: 30px;
+  line-height: 300px;
+  text-align: center;
+}
+.component-carouse .carouse-btn {
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+}
+.component-carouse .carouse-prev {
+  top: 50%;
+  left: 10px;
+}
+.component-carouse .carouse-next {
+  top: 50%;
+  right: 10px;
+}
+
+.component-rating {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 12px;
+}
+.component-rating img {
+  width: 10px;
+  height: 10px;
+}
+.component-rating p.rating-average {
+  margin-left: 4px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+}
+
+.demo-theater {
+  width: 100%;
+}
+.demo-theater .theater-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 70px;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+  background-color: #282c34;
+  cursor: pointer;
+}
+.demo-theater .theater-header h2 {
+  margin: 0;
+}
+.demo-theater .theater-search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.demo-theater .theater-search input[type="submit"] {
+  width: 80px;
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+}
+.demo-theater .theater-search input[type="submit"]:hover {
+  color: antiquewhite;
+  background-color: #282c34;
+}
+.demo-theater .theater-search > input[type="text"] {
+  width: 40%;
+  min-width: 170px;
+}
+.demo-theater .theater-movies {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+}
+.demo-theater .theater-movies .theater-movie {
+  max-width: 25%;
+  padding: 5px 25px 10px 25px;
+}
+.demo-theater .theater-movies .theater-movie img {
+  width: 200px;
+}
+.demo-theater .movies-poster {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 108px;
+  margin-bottom: 15px;
+}
+.demo-theater .movies-poster img.poster-img {
+  width: 100%;
+  height: 151px;
+  border-radius: 4px;
+}
+.demo-theater .movies-poster p.poster-title {
+  margin-top: 4px;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 23px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.demo-theater .movies-poster .poster-rating {
+  height: 12px;
+}
+.demo-theater .movies-poster .poster-rating span {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  line-height: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+#app {
+  width: 100%;
+}
+.app-wrapper {
+  width: 100%;
+}
+

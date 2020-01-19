@@ -1,0 +1,40 @@
+.component-carouse {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+
+  .carouse-board {
+    position: relative;
+    left: 0;
+    width: 5000px;
+    height: 300px;
+    padding: 0;
+    list-style: none;
+
+    .carouse-board-item {
+      float: left;
+      width: 400px;
+      height: 300px;
+      font-size: 30px;
+      line-height: 300px;
+      text-align: center;
+    }
+  }
+
+  .carouse-btn {
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+  .carouse-prev {
+    top: 50%;
+    left: 10px;
+  }
+
+  .carouse-next {
+    top: 50%;
+    right: 10px;
+  }
+}
