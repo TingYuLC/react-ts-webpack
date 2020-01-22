@@ -34,6 +34,7 @@ module.exports = {
         test: /\.(js|jsx|ts|tsx)(\?.*)?$/,
         use: [
           'babel-loader',
+          'awesome-typescript-loader',
           {
             loader: 'eslint-loader',
             options: {

@@ -1,20 +1,19 @@
 import * as React from 'react';
-import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import getTheaters from '@/service/movie/getTheaters';
+import { MovieListProps } from '@/service/movie/types';
 import Poster from './Poster';
 import './index.less';
 
 const { useEffect, useState } = React;
 
-const MOVIE_API_URL = 'https://douban-api.uieee.com/v2/movie/in_theaters?start=0&count=6';
-
 const Theater = () => {
   const [movies, setMovies] = useState([]);
   const history = useHistory();
   useEffect(() => {
-    axios.get(MOVIE_API_URL)
-      .then((data) => {
-        setMovies(data.data.subjects);
+    getTheaters(0, 6)
+      .then((data: MovieListProps) => {
+        setMovies(data.subjects);
       });
   }, []);
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import ReactStars from 'react-stars';
 import './index.less';
 
@@ -27,7 +27,7 @@ const MovieDetail = () => {
 
   useEffect(() => {
     axios.get(MOVIE_API_URL + id)
-      .then((data) => {
+      .then((data: AxiosResponse) => {
         const ret = data.data;
         const {
           images, title, original_title: originalTitle, ratings_count: ratingsCount, year,
