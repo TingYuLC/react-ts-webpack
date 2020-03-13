@@ -6,4 +6,5 @@ build/**
 config/**
 lib/**
 types/**
+src/vendor/**
 *.js
