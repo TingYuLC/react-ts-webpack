@@ -23,6 +23,7 @@ declare namespace sjcl {
     export var json: SjclJson;
     export var encrypt: SjclConvenienceEncryptor;
     export var decrypt: SjclConvenienceDecryptor;
+    export var beware: SjclCodecb;
 
     // ________________________________________________________________________
 
@@ -208,6 +209,10 @@ declare namespace sjcl {
         base64: SjclCodec<string>;
         base64url: SjclCodec<string>;
         z85: SjclCodec<string>;
+    }
+
+    interface SjclCodecb {
+        "CBC mode is dangerous because it doesn't protect message integrity.": () => void;
     }
 
     // ________________________________________________________________________
