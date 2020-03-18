@@ -1,6 +1,6 @@
-const doubanMovie = '/v2/movie/';
+const baseURL = '/v2/movie';
 const movie = {
-  inTheaters: `${doubanMovie}in_theaters`,
+  inTheaters: `${baseURL}/in_theaters`,
 };
 
 export default movie;

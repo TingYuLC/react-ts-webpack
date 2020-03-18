@@ -10,6 +10,10 @@ const axiosRequest = (config = {}) => {
       axiosOptions.url = url;
       axiosOptions.method = options.method || 'get';
       axiosOptions.timeout = options.timeout || 20000;
+      axiosOptions.data = options.data;
+      if (axiosOptions.method.toUpperCase() === 'POST' && !axiosOptions.headers['content-type']) {
+        axiosOptions.headers['content-type'] = 'application/json;charset=UTF-8';
+      }
 
       const send = () => {
         axiosIns(axiosOptions)

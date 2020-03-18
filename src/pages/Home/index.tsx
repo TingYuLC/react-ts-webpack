@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
+import { AxiosResponse } from 'axios';
 import getTheaters from '@/service/movie/getTheaters';
-import { MovieListProps } from '@/service/movie/types';
 import Poster from './Poster';
 import './index.less';
 
@@ -12,8 +12,8 @@ const Theater = () => {
   const history = useHistory();
   useEffect(() => {
     getTheaters(0, 6)
-      .then((data: MovieListProps) => {
-        setMovies(data.subjects);
+      .then((data: AxiosResponse) => {
+        setMovies(data.data);
       });
   }, []);
 

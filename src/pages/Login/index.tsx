@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { useHistory } from 'react-router-dom';
 import aes from '@/common/aes';
+import signin from '@/service/login/signin';
 import './index.less';
 
 const { useState } = React;
@@ -7,15 +9,22 @@ const { useState } = React;
 const { encrypted } = aes;
 
 const Login = () => {
+  const history = useHistory();
   const [usernameRef] = useState(React.createRef<HTMLInputElement>());
   const [passwordRef] = useState(React.createRef<HTMLInputElement>());
 
-  const signin = () => {
-    const data = {
+  const loginSubmit = () => {
+    const submitData = {
       username: usernameRef.current.value,
       password: passwordRef.current.value,
     };
-    encrypted(JSON.stringify(data));
+    signin({
+      auth: encrypted(JSON.stringify(submitData)),
+    })
+      .then(() => {
+        history.push('/movie');
+        window.location.reload();
+      });
   };
 
   return (
@@ -36,7 +45,7 @@ const Login = () => {
         <button
           type="submit"
           className="login-btn"
-          onClick={signin}
+          onClick={loginSubmit}
         >
           登录
         </button>
