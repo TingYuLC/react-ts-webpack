@@ -3,6 +3,14 @@ import axios, { AxiosRequestConfig } from 'axios';
 const axiosRequest = (config = {}) => {
   const axiosIns = axios.create(config);
 
+  axiosIns.interceptors.response.use((res) => {
+    const { data } = res;
+    if (data && data.code === 0) {
+      return data.data;
+    }
+    return Promise.reject(res);
+  });
+
   const request = (url: string, options?: AxiosRequestConfig) => {
     const promise = new Promise((resolve, reject) => {
       const axiosOptions: AxiosRequestConfig = {};
@@ -18,7 +26,7 @@ const axiosRequest = (config = {}) => {
       const send = () => {
         axiosIns(axiosOptions)
           .then((data) => {
-            resolve(data.data);
+            resolve(data);
           })
           .catch((err) => {
             reject(err);

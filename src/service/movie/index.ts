@@ -1,1 +1,5 @@
-export * from './getTheaters';
+import getTheaters from './getTheaters';
+
+export * from './types';
+
+export default getTheaters;

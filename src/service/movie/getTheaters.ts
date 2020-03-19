@@ -6,7 +6,7 @@ import api from './api';
  * @param {number} start 开始位置
  * @param {number} count 返回数量
  */
-const getTheaters = (start: number, count: number) => {
+const getTheaters = async (start: number, count: number) => {
   const url = api.inTheaters.replace('{start}', start.toString()).replace('{count}', count.toString());
   return axiosRequest(url, {});
 };
