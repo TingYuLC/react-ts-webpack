@@ -1,5 +1,7 @@
 import getTheaters from './getTheaters';
 
-export * from './types';
+export interface GetTheatersProps {
+  subjects: [];
+}
 
 export default getTheaters;
