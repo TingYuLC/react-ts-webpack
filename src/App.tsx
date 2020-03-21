@@ -17,7 +17,7 @@ const App = () => (
       <Route path="/movie/movie-detail/:id">
         <MovieDetail />
       </Route>
-      <Route path="/movie/theme">
+      <Route path="/theme">
         <Theme />
       </Route>
     </Switch>

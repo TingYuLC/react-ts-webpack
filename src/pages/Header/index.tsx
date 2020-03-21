@@ -38,9 +38,9 @@ const Header = ({
       title: '豆瓣App',
       leftImg: back,
       rightImg: search,
-      leftClick: () => { history.push('/'); },
+      leftClick: () => { history.push('/movie'); },
     },
-    '/': {
+    '/movie': {
       title: '豆瓣App',
       leftImg: toning,
       rightImg: search,

@@ -17,7 +17,7 @@ const Theater = () => {
   }, []);
 
   const toMovieDetail = (id: string) => {
-    history.push(`movie-detail/${id}`);
+    history.push(`movie/movie-detail/${id}`);
   };
 
   return (

@@ -23,7 +23,6 @@ const Login = () => {
     })
       .then(() => {
         history.push('/movie');
-        window.location.reload();
       });
   };
 
