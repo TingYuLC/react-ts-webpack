@@ -33,6 +33,7 @@ module.exports = {
       {
         test: /\.(js|jsx|ts|tsx)(\?.*)?$/,
         use: [
+          'cache-loader',
           'babel-loader',
           'awesome-typescript-loader',
           {
@@ -110,4 +111,4 @@ module.exports = {
       manifest: resolve('dll/polyfill.manifest.json')
     })
   ]
-}
+};
