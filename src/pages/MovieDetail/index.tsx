@@ -2,6 +2,9 @@ import * as React from 'react';
 import { useParams } from 'react-router-dom';
 import axios, { AxiosResponse } from 'axios';
 import ReactStars from 'react-stars';
+import { connect } from 'react-redux';
+import { AppState } from '@/store';
+import { ThemeState } from '@/store/theme/types';
 import './index.less';
 
 const { useState, useEffect } = React;
@@ -19,7 +22,11 @@ const detailsDefault = {
   ratingAverage: 0, // 评分
 };
 
-const MovieDetail = () => {
+interface HeaderProps {
+  theme: ThemeState;
+}
+
+const MovieDetail = ({ theme }: HeaderProps) => {
   const { id } = useParams();
 
   const [loading, setLoading] = useState(true);
@@ -53,7 +60,7 @@ const MovieDetail = () => {
     } = details;
     return (
       <div className="detail-info">
-        <div className="header-poster">
+        <div className="header-poster" style={{ background: `linear-gradient(${theme.color}, white)` }}>
           <img className="poster-img" src={poster} alt="poster" />
         </div>
         <div className="header-sub">
@@ -107,4 +114,6 @@ const MovieDetail = () => {
   return loading ? LoadingView() : ContentView();
 };
 
-export default MovieDetail;
+export default connect((state: AppState) => ({
+  theme: state.theme,
+}))(MovieDetail);
