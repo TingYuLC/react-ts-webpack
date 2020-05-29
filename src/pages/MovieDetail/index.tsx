@@ -19,7 +19,8 @@ const detailsDefault = {
   directors: '', // 导演
   casts: '', // 主演
   ratingsCount: 0, // 打分人数
-  ratingAverage: 0, // 评分
+  ratingAverage: 0, // 评分,
+  summary: '', // 简介
 };
 
 interface HeaderProps {
@@ -38,7 +39,7 @@ const MovieDetail = ({ theme }: HeaderProps) => {
         const ret = data.data;
         const {
           images, title, original_title: originalTitle, ratings_count: ratingsCount, year,
-          countries, genres, directors, casts, rating,
+          countries, genres, directors, casts, rating, summary,
         } = ret;
         setDetails({
           title, // 主标题
@@ -49,6 +50,7 @@ const MovieDetail = ({ theme }: HeaderProps) => {
           casts: casts.map((item: {name: string}) => item.name).join(' '),
           ratingAverage: rating.average,
           ratingsCount,
+          summary,
         });
         setLoading(false);
       });
@@ -57,6 +59,7 @@ const MovieDetail = ({ theme }: HeaderProps) => {
   const InfoView = () => {
     const {
       poster, title, subTitle, meta, directors, casts, ratingsCount, ratingAverage,
+      summary,
     } = details;
     return (
       <div className="detail-info">
@@ -96,6 +99,12 @@ const MovieDetail = ({ theme }: HeaderProps) => {
               edit
               size={20}
             />
+          </div>
+        </div>
+        <div className="header-content">
+          <div className="header-content-intro">
+            <h5 className="header-content-title">简介</h5>
+            <p>{summary}</p>
           </div>
         </div>
       </div>
