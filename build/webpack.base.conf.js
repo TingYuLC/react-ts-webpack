@@ -33,7 +33,6 @@ module.exports = {
       {
         test: /\.(js|jsx|ts|tsx)(\?.*)?$/,
         use: [
-          'cache-loader',
           'babel-loader',
           'awesome-typescript-loader',
           {
