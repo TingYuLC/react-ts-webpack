@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import getTheaters, { GetTheatersProps } from '@/service/movie';
 import Poster from './Poster';

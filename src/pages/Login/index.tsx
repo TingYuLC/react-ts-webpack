@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import aes from '@/common/aes';
 import signin from '@/service/login/signin';

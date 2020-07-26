@@ -1,5 +1,5 @@
-import * as React from 'react';
-import * as ReactDom from 'react-dom';
+import React from 'react';
+import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';

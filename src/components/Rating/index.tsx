@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { starEmpty, starFull, starHalf } from '@/static';
 import './index.less';
 
